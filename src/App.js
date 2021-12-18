@@ -1,17 +1,22 @@
 import React, { Component, Fragment } from "react";
-
-import Pokemons from "./containers/Pokemons";
+import { BrowserRouter, Routes, Route } from "react-router-dom";
 
 import "./App.scss";
+import "bootstrap/dist/css/bootstrap.min.css";
+
+import Header from "./components/Header";
+import Homepage from "./pages/Homepage";
 
 class App extends Component {
   render() {
     return (
       <Fragment>
-        <div className="App">
-          <h1>Hello</h1>
-          <Pokemons />
-        </div>
+        <BrowserRouter>
+          <Header />
+          <Routes>
+            <Route exact path="/" element={<Homepage />} />
+          </Routes>
+        </BrowserRouter>
       </Fragment>
     );
   }
