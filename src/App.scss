@@ -1,3 +1,23 @@
 .App {
   background-color: #e6e6e6;
 }
+
+.pokemons {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+}
+
+.my-3.card:hover {
+  transform: scale(1.05);
+  transition: 0.4s ease-out;
+}
+
+.card-title.h5 {
+  text-transform: capitalize;
+}
+
+.abilities {
+  display: flex;
+  text-transform: capitalize;
+}
