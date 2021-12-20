@@ -1,11 +1,11 @@
 import React from "react";
-import Pokemons from "../containers/Pokemons";
+import PokemonsList from "../components/PokemonsList";
 
 export default function Homepage() {
   return (
     <div>
       <div className="App">
-        <Pokemons />
+        <PokemonsList />
       </div>
     </div>
   );
