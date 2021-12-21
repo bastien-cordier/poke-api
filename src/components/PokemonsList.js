@@ -5,6 +5,7 @@ import axios from "axios";
 export default function PokemonsList() {
   const [pokemons, setPokemon] = useState([]);
   const [loading, setLoading] = useState(false);
+  const [searchPokemon, setSearchPokemon] = useState("");
 
   useEffect(() => {
     setLoading(true);
@@ -27,12 +28,30 @@ export default function PokemonsList() {
       {loading ? (
         <h2>Loading ...</h2>
       ) : (
-        <div className="pokemons">
-          {pokemons.map((pokemon, i) => (
-            <div key={i}>
-              <PokemonCard pokemon={pokemon} />
-            </div>
-          ))}
+        <div className="text-center">
+          <input
+            type="text"
+            placeholder="Find your Pokemon ..."
+            className="searchFilter mb-3"
+            onChange={(e) => {
+              setSearchPokemon(e.target.value);
+            }}
+          />
+          <div className="pokemons">
+            {pokemons
+              .filter((pokemon) => {
+                if (searchPokemon === "") {
+                  return pokemon;
+                } else if (pokemon.name.toLowerCase().includes(searchPokemon.toLowerCase())) {
+                  return pokemon;
+                }
+              })
+              .map((pokemon, i) => (
+                <div key={i}>
+                  <PokemonCard pokemon={pokemon} />
+                </div>
+              ))}
+          </div>
         </div>
       )}
     </div>

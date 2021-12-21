@@ -1,5 +1,29 @@
+@import url("https://fonts.googleapis.com/css2?family=VT323&display=swap");
+
 .App {
   background-color: #e6e6e6;
+
+  h2 {
+    font-size: 3em;
+    font-family: "VT323", monospace;
+    color: red;
+    text-align: center;
+    padding: 40px 0px 20px 0px;
+
+    img {
+      max-width: 50px;
+      margin-right: 30px;
+    }
+  }
+}
+
+.searchFilter {
+  border: 2px solid #f0524f;
+  border-radius: 50px;
+  font-size: 1.2em;
+  padding-left: 10px;
+  width: 400px;
+  text-align: center;
 }
 
 .pokemons {
@@ -19,5 +43,6 @@
 
 .abilities {
   display: flex;
+  justify-content: center;
   text-transform: capitalize;
 }

@@ -9,6 +9,8 @@ const PokemonCard = ({ pokemon }) => {
         <Card.Title>{pokemon.name}</Card.Title>
         <Card.Text>
           <b>Height :</b> {pokemon.height}
+          <br />
+          <b>Weight :</b> {pokemon.weight}
         </Card.Text>
         <Card.Text>Abilities :</Card.Text>
         <div className="abilities">
