@@ -6,7 +6,8 @@ import "bootstrap/dist/css/bootstrap.min.css";
 
 import Header from "./components/Header";
 import Footer from "./components/Footer";
-import Homepage from "./pages/Homepage";
+
+import Pokemons from "./containers/Pokemons";
 
 class App extends Component {
   render() {
@@ -15,7 +16,7 @@ class App extends Component {
         <BrowserRouter>
           <Header />
           <Routes>
-            <Route exact path="/" element={<Homepage />} />
+            <Route exact path="/" element={<Pokemons />} />
           </Routes>
           <Footer />
         </BrowserRouter>
