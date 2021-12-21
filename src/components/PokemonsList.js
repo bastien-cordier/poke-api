@@ -26,7 +26,9 @@ export default function PokemonsList() {
   return (
     <div>
       {loading ? (
-        <h2>Loading ...</h2>
+        <div className="text-center my-5">
+          <img src="assets/loader.png" alt="loading" className="loader" />
+        </div>
       ) : (
         <div className="text-center">
           <input
