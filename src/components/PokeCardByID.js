@@ -3,7 +3,7 @@ import { Badge, Card, Container, Col, Row } from "react-bootstrap";
 
 const PokeCardByID = ({ pokemon }) => {
   return (
-    <div style={{ padding: "80px" }}>
+    <div className="cardByID">
       <Card>
         <Container className="fichePokemon">
           <Row>

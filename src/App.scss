@@ -54,25 +54,55 @@
   }
 }
 
-.fichePokemon {
-  h2 {
-    text-transform: capitalize;
+.cardByID {
+  padding: 40px 80px 20px 80px;
+
+  .fichePokemon {
+    h2 {
+      text-transform: capitalize;
+    }
+
+    img {
+      max-width: 380px;
+      padding: 50px;
+    }
+
+    .pokemonDetails {
+      padding: 40px;
+    }
+
+    .skills {
+      display: flex;
+      text-transform: capitalize;
+    }
+
+    .stats {
+      display: flex;
+      flex-wrap: wrap;
+      text-transform: capitalize;
+    }
   }
-  img {
-    max-width: 380px;
-    padding: 50px;
+}
+
+.btn-card {
+  .btn-home {
+    border: none;
+    padding: 15px 20px 15px 10px;
+    border-radius: 50px;
   }
-  .pokemonDetails {
-    padding: 40px;
+  .btn-home:hover {
+    background-color: #e6e6e6;
+    transition: ease-in-out 0.4s;
   }
-  .skills {
-    display: flex;
-    text-transform: capitalize;
+
+  .btn-like {
+    border: none;
+    padding: 15px 20px 15px 10px;
+    border-radius: 50px;
   }
-  .stats {
-    display: flex;
-    flex-wrap: wrap;
-    text-transform: capitalize;
+  .btn-like:hover {
+    background-color: #e6e6e6;
+    transition: ease-in-out 0.4s;
   }
 }
 
