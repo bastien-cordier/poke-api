@@ -3,7 +3,7 @@ import { Navbar, Nav } from "react-bootstrap";
 
 export default function Header() {
   return (
-    <Navbar variant="dark" style={{ backgroundColor: "#F0524F" }}>
+    <Navbar variant="dark" bg="dark">
       <Navbar.Brand href="/" style={{ marginLeft: "20px" }}>
         <img src="assets/loader.png" alt="logo" style={{ maxWidth: "20px" }} /> MyPokedex
       </Navbar.Brand>
