@@ -5,9 +5,9 @@ import "./App.scss";
 import "bootstrap/dist/css/bootstrap.min.css";
 
 import Header from "./components/Header";
-import Footer from "./components/Footer";
 
-import Pokemons from "./containers/Pokemons";
+import PokemonsList from "./containers/PokemonsList";
+import AboutPokemon from "./containers/AboutPokemon";
 
 class App extends Component {
   render() {
@@ -16,9 +16,9 @@ class App extends Component {
         <BrowserRouter>
           <Header />
           <Routes>
-            <Route exact path="/" element={<Pokemons />} />
+            <Route exact path="/" element={<PokemonsList />} />
+            <Route exact path="/:name" element={<AboutPokemon />} />
           </Routes>
-          <Footer />
         </BrowserRouter>
       </Fragment>
     );

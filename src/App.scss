@@ -13,6 +13,11 @@
       margin-right: 30px;
     }
   }
+
+  a {
+    text-decoration: none;
+    color: #161616;
+  }
 }
 
 .searchFilter {
@@ -28,21 +33,45 @@
   display: flex;
   justify-content: space-around;
   flex-wrap: wrap;
+
+  .cardsHomepage {
+    .my-3.card:hover {
+      transform: scale(1.05);
+      transition: 0.4s ease-out;
+    }
+
+    .card {
+      .card-title.h5 {
+        text-transform: capitalize;
+      }
+
+      .type {
+        display: flex;
+        justify-content: center;
+        text-transform: capitalize;
+      }
+    }
+  }
 }
 
-.my-3.card:hover {
-  transform: scale(1.05);
-  transition: 0.4s ease-out;
-}
-
-.card {
-  .card-title.h5 {
+.fichePokemon {
+  h2 {
     text-transform: capitalize;
   }
-
-  .abilities {
+  img {
+    max-width: 380px;
+    padding: 50px;
+  }
+  .pokemonDetails {
+    padding: 40px;
+  }
+  .skills {
     display: flex;
-    justify-content: center;
+    text-transform: capitalize;
+  }
+  .stats {
+    display: flex;
+    flex-wrap: wrap;
     text-transform: capitalize;
   }
 }
