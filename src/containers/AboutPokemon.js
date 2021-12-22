@@ -6,7 +6,7 @@ import { Button, Modal } from "react-bootstrap";
 
 import PokeCardByID from "../components/PokeCardByID";
 
-const AboutPokemon = () => {
+export default function AboutPokemon() {
   const { name } = useParams();
   const [pokemon, setPokemon] = useState("");
   const [show, setShow] = useState(false);
@@ -18,7 +18,7 @@ const AboutPokemon = () => {
     axios.get(`https://pokeapi.co/api/v2/pokemon/${name}`).then((res) => {
       setPokemon(res.data);
     });
-  }, []);
+  }, [name]);
 
   if (!pokemon)
     return (
@@ -62,5 +62,4 @@ const AboutPokemon = () => {
       </div>
     </div>
   );
-};
-export default AboutPokemon;
+}
