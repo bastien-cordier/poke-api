@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React, { Fragment, useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 
 import axios from "axios";
@@ -10,6 +10,7 @@ export default function PokemonsByType() {
   const [loading, setLoading] = useState(false);
 
   useEffect(() => {
+    setLoading(true);
     axios
       .get(`https://pokeapi.co/api/v2/type/${name}`)
       .then((res) => {
@@ -25,7 +26,7 @@ export default function PokemonsByType() {
   }, [name]);
 
   return (
-    <div>
+    <Fragment>
       {loading ? (
         <div className="text-center my-5">
           <img src="assets/loader.png" alt="loading" className="loader" />
@@ -48,6 +49,6 @@ export default function PokemonsByType() {
           </div>
         </>
       )}
-    </div>
+    </Fragment>
   );
 }

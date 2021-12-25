@@ -40,7 +40,7 @@ export default function PokemonsList() {
           ) : (
             <div className="text-center">
               <input
-                type="text"
+                type="search"
                 placeholder="Find your Pokemon ..."
                 className="searchFilter mb-3"
                 onChange={(e) => {

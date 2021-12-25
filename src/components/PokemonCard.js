@@ -17,9 +17,9 @@ const PokemonCard = ({ pokemon }) => {
             </Card.Text>
             <Card.Text>Types :</Card.Text>
             <div className="type">
-              {pokemon.types.map((types, idx) => {
+              {pokemon.types.map((types, i) => {
                 return (
-                  <div key={idx} className="mx-1">
+                  <div key={i} className="mx-1">
                     <Badge bg="primary">{types.type.name}</Badge>
                   </div>
                 );

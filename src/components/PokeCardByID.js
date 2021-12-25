@@ -19,9 +19,9 @@ const PokeCardByID = ({ pokemon }) => {
               </p>
               <div className="skills">
                 Types :
-                {pokemon.types.map((types, idx) => {
+                {pokemon.types.map((types, i) => {
                   return (
-                    <div key={idx} className="mx-1">
+                    <div key={i} className="mx-1">
                       <Badge bg="danger">{types.type.name}</Badge>
                     </div>
                   );
@@ -29,9 +29,9 @@ const PokeCardByID = ({ pokemon }) => {
               </div>
               <div className="skills">
                 Abilities :
-                {pokemon.abilities.map((abilities, idx) => {
+                {pokemon.abilities.map((abilities, i) => {
                   return (
-                    <div key={idx} className="mx-1">
+                    <div key={i} className="mx-1">
                       <Badge bg="danger">{abilities.ability.name}</Badge>
                     </div>
                   );
@@ -40,9 +40,9 @@ const PokeCardByID = ({ pokemon }) => {
               <br />
               Stats :<br />
               <div className="stats">
-                {pokemon.stats.map((stats, idx) => {
+                {pokemon.stats.map((stats, i) => {
                   return (
-                    <div key={idx} className="mx-1">
+                    <div key={i} className="mx-1">
                       <Badge bg="danger">
                         {stats.stat.name} : {stats.base_stat}
                       </Badge>
