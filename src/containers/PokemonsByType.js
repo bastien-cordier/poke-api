@@ -29,8 +29,7 @@ export default function PokemonsByType() {
     <Fragment>
       {loading ? (
         <div className="text-center my-5">
-          <img src="assets/loader.png" alt="loading" className="loader" />
-          <h5 className="my-3">Nous ne trouvons pas de Pokémons associés à ce type ...</h5>
+          <h5 className="my-3">À la recherche de vos pokémons ...</h5>
         </div>
       ) : (
         <>

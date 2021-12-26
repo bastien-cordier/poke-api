@@ -1,8 +1,21 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import { Badge, Card } from "react-bootstrap";
 import { Link } from "react-router-dom";
 
 const PokemonCard = ({ pokemon }) => {
+  // const [pokemons, setPokemons] = useState([]);
+
+  // useEffect(() => {
+  //   localStorage.setItem("favorites", JSON.stringify({ pokemons }));
+  // }, [pokemons]);
+
+  // const addFavorites = () => {
+  //   var a = [pokemon];
+  //   a = JSON.parse(localStorage.getItem("favorites")) || [];
+  //   a.push(pokemon);
+  //   localStorage.setItem("favorites", JSON.stringify(a));
+  // };
+
   return (
     <div className="cardsHomepage">
       <Link to={`/${pokemon.name}`}>
@@ -24,6 +37,11 @@ const PokemonCard = ({ pokemon }) => {
                   </div>
                 );
               })}
+            </div>
+            <div className="my-3">
+              {/* <button onClick={addFavorites} className="actionButton mx-2">
+              <i className="fas fa-heart link my-2 mx-2" />
+            </button> */}
             </div>
           </Card.Body>
         </Card>

@@ -1,4 +1,6 @@
 import React from "react";
+
+import { Link } from "react-router-dom";
 import { Badge, Card, Container, Col, Row } from "react-bootstrap";
 
 const PokeCardByID = ({ pokemon }) => {
@@ -22,7 +24,9 @@ const PokeCardByID = ({ pokemon }) => {
                 {pokemon.types.map((types, i) => {
                   return (
                     <div key={i} className="mx-1">
-                      <Badge bg="danger">{types.type.name}</Badge>
+                      <Link to={`/types/${types.type.name}`}>
+                        <Badge bg="danger">{types.type.name}</Badge>
+                      </Link>
                     </div>
                   );
                 })}
