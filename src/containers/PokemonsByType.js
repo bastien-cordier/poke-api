@@ -8,6 +8,7 @@ export default function PokemonsByType() {
   const { name } = useParams();
   const [pokeByType, setPokeByType] = useState([]);
   const [loading, setLoading] = useState(false);
+  const [searchPokemon, setSearchPokemon] = useState("");
 
   useEffect(() => {
     setLoading(true);
@@ -33,18 +34,33 @@ export default function PokemonsByType() {
         </div>
       ) : (
         <>
-          <div className="title-page">
-            <h2 className="text-center my-4">
+          <div className="title-page text-center">
+            <h2 className="my-4">
               Liste des pokémons de type <span style={{ textTransform: "capitalize" }}>{name}</span>
             </h2>
+            <input
+              type="search"
+              placeholder="Find your Pokemon ..."
+              className="searchFilter mb-3"
+              onChange={(e) => {
+                setSearchPokemon(e.target.value);
+              }}
+            />
           </div>
-
           <div className="pokemons text-center">
-            {pokeByType.map((pokemonElement, i) => (
-              <div key={i}>
-                <PokemonCard pokemon={pokemonElement} />
-              </div>
-            ))}
+            {pokeByType
+              .filter((pokemonElement) => {
+                if (searchPokemon === "") {
+                  return pokemonElement;
+                } else if (pokemonElement.name.toLowerCase().includes(searchPokemon.toLowerCase())) {
+                  return pokemonElement;
+                }
+              })
+              .map((pokemonElement, i) => (
+                <div key={i}>
+                  <PokemonCard pokemon={pokemonElement} />
+                </div>
+              ))}
           </div>
         </>
       )}
